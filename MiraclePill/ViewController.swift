@@ -27,6 +27,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     @IBAction func stateButtonPressed(_ sender: AnyObject) {
+        statePicker.isHidden = false
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int { // Wants to know how many components do we need for the picker
@@ -34,13 +35,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { // Wants to know how many rows do we want to put in here
-        return 0
+        return states.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { // Wants to know the title of each row
-        return " "
+        return states[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        statePickerBTN.setTitle(states[row], for: UIControlState()) // Grabs the state out of the array and sets it to the button. (Use UIControlState.normal outside of th beta)
+        statePicker.isHidden = true
+    }
     
 
 }
