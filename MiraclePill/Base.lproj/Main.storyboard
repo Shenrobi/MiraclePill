@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,16 +25,71 @@
                                     <constraint firstAttribute="width" constant="105" id="TKT-zN-gck"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIRACLE PILLS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrj-Fm-Wkt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="7Vs-Gw-sGe"/>
+                                    <constraint firstAttribute="height" constant="21" id="sVW-6N-si3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-cr-bsy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7GR-hd-JiD"/>
+                                    <constraint firstAttribute="width" constant="52" id="859-bL-juK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCT-vf-1Zb" userLabel="Divider">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4DY-E2-s8W"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SV-N6-VVE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="zpJ-Mf-OXG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-IN-o7I">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c7i-k2-uxe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9SV-N6-VVE" firstAttribute="top" secondItem="MCT-vf-1Zb" secondAttribute="bottom" constant="16" id="6YF-2K-fAe"/>
+                            <constraint firstItem="cRW-IN-o7I" firstAttribute="leading" secondItem="9SV-N6-VVE" secondAttribute="leading" id="6vy-uM-Lre"/>
+                            <constraint firstItem="9SV-N6-VVE" firstAttribute="trailing" secondItem="MCT-vf-1Zb" secondAttribute="trailing" id="BFn-ni-RQ1"/>
                             <constraint firstItem="ChF-5h-fke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="C8A-sm-Eqr"/>
+                            <constraint firstItem="cRW-IN-o7I" firstAttribute="top" secondItem="9SV-N6-VVE" secondAttribute="bottom" constant="8" id="ChH-Q7-5ri"/>
+                            <constraint firstItem="MCT-vf-1Zb" firstAttribute="centerX" secondItem="hhh-cr-bsy" secondAttribute="centerX" id="FWk-Te-EoH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MCT-vf-1Zb" secondAttribute="trailing" constant="20" id="GyP-KW-LCB"/>
+                            <constraint firstItem="9SV-N6-VVE" firstAttribute="leading" secondItem="MCT-vf-1Zb" secondAttribute="leading" id="IRX-21-gBC"/>
+                            <constraint firstItem="hhh-cr-bsy" firstAttribute="centerX" secondItem="nrj-Fm-Wkt" secondAttribute="centerX" id="LSW-dT-GFa"/>
+                            <constraint firstItem="MCT-vf-1Zb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="LqW-41-e6O"/>
+                            <constraint firstItem="nrj-Fm-Wkt" firstAttribute="top" secondItem="ChF-5h-fke" secondAttribute="bottom" constant="25" id="MyE-22-rZn"/>
+                            <constraint firstItem="MCT-vf-1Zb" firstAttribute="top" secondItem="hhh-cr-bsy" secondAttribute="bottom" constant="10" id="bIQ-rx-3SZ"/>
+                            <constraint firstItem="hhh-cr-bsy" firstAttribute="top" secondItem="nrj-Fm-Wkt" secondAttribute="bottom" constant="8" id="syq-G3-LlW"/>
                             <constraint firstItem="ChF-5h-fke" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wng-7f-aXz"/>
+                            <constraint firstItem="cRW-IN-o7I" firstAttribute="trailing" secondItem="9SV-N6-VVE" secondAttribute="trailing" id="xdQ-zP-pP2"/>
+                            <constraint firstItem="nrj-Fm-Wkt" firstAttribute="centerX" secondItem="ChF-5h-fke" secondAttribute="centerX" id="zNh-WV-0fJ"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
