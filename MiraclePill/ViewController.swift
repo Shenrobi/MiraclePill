@@ -13,6 +13,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBTN: UIButton!
     
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryTextField: UITextField!
+    
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    @IBOutlet weak var zipCodeTextField: UITextField!
+    
+    @IBOutlet weak var buyNow: UIButton!
+    
+    
     let states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "Washington D.C.", "West Virginia", "Wisconsin", "Wyoming"]
     
     override func viewDidLoad() {
@@ -28,6 +37,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBAction func stateButtonPressed(_ sender: AnyObject) {
         statePicker.isHidden = false
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        zipCodeLabel.isHidden = true
+        zipCodeTextField.isHidden = true
+        buyNow.isHidden = true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int { // Wants to know how many components do we need for the picker
@@ -45,7 +59,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statePickerBTN.setTitle(states[row], for: UIControlState()) // Grabs the state out of the array and sets it to the button. (Use UIControlState.normal outside of th beta)
         statePicker.isHidden = true
+        countryLabel.isHidden = false
+        countryTextField.isHidden = false
+        zipCodeLabel.isHidden = false
+        zipCodeTextField.isHidden = false
+        buyNow.isHidden = false
+        
     }
+    
     
 
 }
